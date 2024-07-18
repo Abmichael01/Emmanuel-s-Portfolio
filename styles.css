@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Anta&family=Kode+Mono:wght@400..700&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Quicksand";
+    text-decoration: none;
+    color: #333;
+
+}
+
+body{
+    height: 100vh;
+    /* background: linear-gradient(to right, #f0f0f0, #ffffff); */
+    padding-bottom: 30px;
+}
+
+
+header{
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+header .logo span{
+    color: #9917c8;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav a{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #666;
+}
+
+header .menu{
+    display: none;
+    font-size: 25px;
+    padding: 3px 10px;
+    border: 1.5px solid #9917c8;
+    color: #9917c8;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+}
+
+header .close-menu{
+    display: none;
+    font-size: 18px;
+    padding: 0px 10px;
+    border-left: 2px solid #9917c8;
+    color: #9917c8;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+
+.x-mark {
+    color: #9917c8; 
+    width: 50px; 
+    height: 50px;
+  }
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 150px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* .hero h1, h3, p{
+    color: white;
+} */
+
+.hero h1{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.hero h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero h3 span{
+    color: #9917c8;
+}
+
+.hero p{
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.hero .buttons{
+    display: flex;
+}
+
+.hero button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #9917c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.hero button:nth-child(2){
+    border: 1.5px solid #333;
+    background: #fff;
+    color: #333;
+}
+
+.hero .socials{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hero .socials a i{
+    margin-right: 50px;
+    margin-bottom: 10px;
+    color:  #777;
+    transition: color 0.3s ease-in-out;
+    font-size: 25px;
+}
+
+.hero hr{
+    width: 100%;
+    margin-top: 30px;
+    /* border: .5px solid #ccc; */
+    height: .5px;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #ccc;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 100px;
+    margin-top: 80px;
+}
+
+.about h2{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p{
+    color: #555;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.contact{
+    padding: 0px 100px;
+    margin-top: 80px;
+    padding: 0px 20%;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact form h2{
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.contact form input, .contact form textarea{
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid ;
+    border-color: #ccc;
+    font-size: 18px;
+    outline-color: #9917c8;
+    margin-bottom: 20px;
+}
+
+.contact form textarea {
+    height: 200px;
+}
+
+.contact form button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #9917c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    margin-top: 100px;
+    background: #242424;
+    
+}
+
+.footer p{
+    color: white;
+}
+
+@media screen and (max-width: 640px) {
+    header .menu{
+        display: block;
+    }
+
+    header .close-menu{
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    header nav{
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        right: -400px;
+        top: 0;
+        width: 300px;
+        z-index: 2;
+        background: white;
+        border-left: 1px solid #ccc;
+        padding: 30px 20px;
+        transition: .3s ease-in;
+        box-shadow: 0px 0px 10px #2424245f;
+    }
+
+    header .toggle-nav{
+        right: 0;
+    }
+
+    header nav a{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header{
+        padding: 10px 30px;
+    }
+    .hero, .about, .contact{
+        padding: 0px 20px;
+    }
+
+    /* .about p{
+        text-align: justify;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .hero h3{
+        font-size: 20px;
+    }
+
+    header{
+        padding: 10px 15px;
+    }
+
+    .hero, .about, .contact{
+        padding: 0px 10px;
+    }
+
+    header nav{
+        width: 70%;
+    }
+
+    .hero .socials a i{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .hero .buttons{
+        flex-direction: column;
+    }
+
+    .hero button{
+        margin-bottom: 10px;
+    }
+}
